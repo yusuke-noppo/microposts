@@ -105,3 +105,12 @@ input {
     color: $state-danger-text;
   }
 }
+dl{
+  margin-top: 20px;
+}
+.dl-horizontal dt{
+  text-align: left;
+}
+dt, dd{
+  font-size:23px;
+}

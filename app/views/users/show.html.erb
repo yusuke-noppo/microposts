@@ -1,4 +1,13 @@
-<h1>
-    <%= gravatar_for @user %>
-    <%= @user.name %>
-</h1>
+<div>
+        <%= gravatar_for @user %>
+</div>
+<dl class="dl-horizontal" style="font-style:23px">
+        <dt>User Name</dt>
+        <dd><%= @user.name %></dd>
+        <dt>Email address</dt>
+        <dd><%= @user.email %></dd>
+        <dt>Birthplace</dt>
+        <dd><%= @user.region %></dd>
+        <dt>Comment</dt>
+        <dd><%= @user.comment %></dd>
+</dl>
