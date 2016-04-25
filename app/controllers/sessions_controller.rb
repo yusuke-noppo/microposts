@@ -6,10 +6,11 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:session][:email].downcase)
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      flash[:info] = "logged in as #{@user.name}"
-      redirect_to @user
+      flash.now[:info] = "logged in as #{@user.name}"
+      #redirect_to @user
+      redirect_back_or user
     else
-      flash[:danger] = "invalid email/password combination"
+      flash.now[:danger] = "invalid email/password combination"
       render 'new'
     end
   end
