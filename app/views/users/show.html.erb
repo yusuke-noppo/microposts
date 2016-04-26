@@ -1,13 +1,18 @@
-<div>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
         <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+    <h3>Microposts (<%= @user.microposts.count %>)</h3>
+    <ol class="microposts">
+      <%= render @microposts %>
+    </ol>
+    <% end %>
+  </div>
 </div>
-<dl class="dl-horizontal" style="font-style:23px">
-        <dt>User Name</dt>
-        <dd><%= @user.name %></dd>
-        <dt>Email address</dt>
-        <dd><%= @user.email %></dd>
-        <dt>Birthplace</dt>
-        <dd><%= @user.region %></dd>
-        <dt>Comment</dt>
-        <dd><%= @user.comment %></dd>
-</dl>
