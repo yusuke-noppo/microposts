@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
     validates :region, presence: false, length:{maximum:50}
     validates :comment, presence: false, length:{maximum:255}
     has_secure_password
+    has_many :microposts
 end
