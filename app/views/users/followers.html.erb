@@ -6,7 +6,7 @@
         <% @users.each do |user| %>
           <div class="follow-list">
           <%= gravatar_for(user, size: 50) %>
-          <p><%= user.name %></p>
+          <%= link_to user.name, user_path(user) %>
           </div>
         <% end %>
       </div>
