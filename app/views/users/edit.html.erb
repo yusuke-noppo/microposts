@@ -5,22 +5,22 @@
         <%= render 'shared/error_messages', object: f.object %>
         
         <%= f.label :name, "User name" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, class: 'form-control' %>
         
         <%= f.label :email, "Email address" %>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, class: 'form-control' %>
         
         <%= f.label :password, "Password" %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, class: 'form-control' %>
         
         <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
         
         <%= f.label :region, "Birthplace" %>
-        <%= f.text_field :region %>
+        <%= f.text_field :region, class: 'form-control' %>
         
         <%= f.label :comment, "Comment" %>
-        <%= f.text_field :comment %>
+        <%= f.text_field :comment, class: 'form-control' %>
 
         <%= f.submit "Edit my account", class: "btn btn-large btn-primary" %>
         <% end %>
