@@ -5,6 +5,8 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <p>Birthplace: <%= @user.region %></p>
+      <p>Comment: <%= @user.comment %></p>
       <%= link_to 'Following', following_user_path %>
       <%= link_to 'Follower', followers_user_path %>
     </section>
